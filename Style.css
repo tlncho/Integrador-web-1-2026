@@ -1,0 +1,68 @@
+/* Página "Principal" */
+header{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+   background-color: rgba(0, 255, 183, 0.2)
+  
+  
+    
+}
+#principal{
+    margin: 0;
+    padding: 0;
+   
+}
+header #logo{
+ font-size: 30px;
+ text-shadow: 2px 2px 4px white;
+ color: #6d8299;
+}
+header i{
+    font-size: 80px;
+    color:tan;
+    text-shadow: 2px 2px 4px gray;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 20px;
+     width: 50%;
+     margin-left: auto;
+}
+nav hr{
+    margin: 0;
+    padding: 0;
+}
+nav .text-menu{
+font-size: 17px;
+text-align: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-decoration: none;
+   color: #6d8299;
+    border-radius: 85px;
+  
+}
+
+nav .menu{
+ padding-bottom: 60px;
+   width: 100%;
+}
+nav .menu:hover{
+background-color:rgba(255, 255, 255, 0.5);
+}
+#principal h1{
+    text-align: center;
+    
+}
+#principal .descripcion{
+    font-size: 25px;
+    text-align: center;
+}
+#contacto section{
+    margin: 0;
+    padding: 20px;
+     background-image: url("./Imagenes/fondo.jpg");
+      background-size: cover;
+}
