@@ -1,4 +1,4 @@
-/* Página "Principal" */
+/* General */
 header{
     display: flex;
     gap: 30px;
@@ -7,11 +7,6 @@ header{
   
   
     
-}
-#principal{
-    margin: 0;
-    padding: 0;
-   
 }
 header #logo{
  font-size: 30px;
@@ -52,6 +47,14 @@ nav .menu{
 nav .menu:hover{
 background-color:rgba(255, 255, 255, 0.5);
 }
+/* Página "Principal" */
+
+#principal{
+    margin: 0;
+    padding: 0;
+   
+}
+
 #principal h1{
     text-align: center;
     
@@ -60,9 +63,127 @@ background-color:rgba(255, 255, 255, 0.5);
     font-size: 25px;
     text-align: center;
 }
-#contacto section{
+
+/* Página Articulo */
+#articulo{
     margin: 0;
-    padding: 20px;
-     background-image: url("./Imagenes/fondo.jpg");
-      background-size: cover;
+    padding: 0;
 }
+.busqueda {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto 30px;
+    padding: 10px 15px;
+    background-color: white;
+    border: 2px solid #dcecf5;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.busqueda span {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.busqueda input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #6d7378;
+    background-color: transparent;
+}
+
+.busqueda input::placeholder {
+    color: #a5adb3;
+}
+.productos-page {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f9fb;
+    min-height: 100vh;
+}
+
+.productos-page h1 {
+    color: #6d8299;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: #777f87;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.categoria {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: #dcecf5;
+    color: #60798b;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.categoria:hover {
+    background-color: #c8e1ee;
+    transform: translateY(-2px);
+}
+
+.categoria.activa {
+    background-color: #f3d9e2;
+    color: #806572;
+}
+
+.tipo-mascota h2 {
+    color: #7c858c;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.animales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.animal {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.perro {
+    background-color: #dcecf5;
+    color: #60798b;
+}
+
+.gato {
+    background-color: #f3d9e2;
+    color: #806572;
+}
+
+.animal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Página Contacto */
+#contacto{
+    margin: 0;
+    padding: 0;
+}
+
