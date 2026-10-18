@@ -6,6 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
 </head>
 <body id="principal">
     <!-- Cabecera -->
@@ -24,7 +25,7 @@
     </header>
 <!-- Main -->
     <main> 
-         <section>
+         <section id="sectionDescripcion">
 <h1>¡Bienvenid@ a pets y paws! <i class="fa-solid fa-otter"></i></h1>
     <p class="descripcion">Todo lo que tu mascota necesita, en un solo lugar 🐾
 
@@ -41,14 +42,65 @@ Y mucho más para que a tu mascota nunca le falte nada.
     <h2 style="text-align: center;">🐾 Encontrá a tu nuevo mejor amigo</h3>
     <p class="descripcion">Hay muchos animales esperando una segunda oportunidad y un hogar donde recibir todo el amor que tienen para dar.</p>
     <p class="descripcion">Deslizá para conocer algunos de nuestros amigos que están esperando ser adoptados. 🐶🐱</p>
-    </section>
+
+</section>
+
+<section id="sectionCarrusel">
+<div class="carrusel">
+
+    <button class="anterior" type="button">&lt;</button>
+
+    <img src="./Imagenes/Adoptar1.png" alt="Animalito en adopción">
+    
+    <h3 class="nombre"></h3>
+    <p class="datos"></p>
+    <p class="descripcionAnimal"></p>
+    <p class="salud"></p>
+
+    <button class="adoptar">QUIERO ADOPTARLO</button>
+
+    <button class="siguiente" type="button">&gt;</button>
+    
+</section>
 </main>
 
 <!-- Pie de página -->
-  <footer>
+  
+<footer class="footer" style="margin: 0;">
+    <div class="footer-content">
 
-  </footer>
+        <div class="footer-paw">🐾</div>
+
+        <h3>Un hogar puede cambiarlo todo</h3>
+
+        <p>
+            Gracias por abrir tu corazón y darle una oportunidad a un nuevo compañero.
+        </p>
+
+        <div class="social-icons" aria-hidden="true">
+            <span class="social-icon">
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+
+            <span class="social-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+            </span>
+
+            <span class="social-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </span>
+        </div>
+
+        <div class="footer-line"></div>
+
+        <span class="copyright">
+            © 2026 Patitas Felices · Todos los derechos reservados
+        </span>
+
+    </div>
+</footer>
+
     
-    <script src="Script.js"></script>
+    
 </body>
 </html>
