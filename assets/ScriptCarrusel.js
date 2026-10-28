@@ -1,4 +1,4 @@
-//CARRUSEL
+
 const imagen = document.querySelector(".carrusel img");
 const botonAnterior = document.querySelector(".anterior");
 const botonSiguiente = document.querySelector(".siguiente");
@@ -117,3 +117,9 @@ botonSiguiente.addEventListener("click", () => {
 
 // Cambio automático cada 5 segundos
 temporizador = setInterval(() => cambiarImagen(1), 5000);
+
+
+
+
+
+
