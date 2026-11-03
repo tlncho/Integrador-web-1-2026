@@ -22,6 +22,8 @@ spanFecha.className = "spanError";
 
 const hoy = new Date().toISOString().split("T")[0];
 
+// Establecemos la fecha mínima
+fecha.min = hoy;
 const mensajeEnviado = document.getElementById("mensajeEnviado");
 
 formulario.addEventListener("submit", function(event) {
@@ -74,12 +76,7 @@ formulario.addEventListener("submit", function(event) {
         fecha.insertAdjacentElement("afterend", spanFecha);
         bandera = false;
 
-    } else if (fecha.value <= hoy) {
-        spanFecha.textContent = "La fecha debe ser posterior a hoy";
-        fecha.insertAdjacentElement("afterend", spanFecha);
-        bandera = false;
-
-    } else {
+    }else {
         spanFecha.textContent = "";
     }
 

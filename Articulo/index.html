@@ -1,62 +1,431 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Productos | Pets & Paws</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/Style.css">
-    <script src="../Script.js" defer></script>
+    <script src="../assets/ScriptProductos.js" defer></script>
 </head>
+
 <body id="articulo">
+
     <!-- Cabecera -->
     <header>
-        <i class="fa-solid fa-paw"></i> 
+        <i class="fa-solid fa-paw"></i>
         <p id="logo">Pets & Paws</p>
-        <!-- Menú -->
+
         <nav>
-        <div class="menu"><a href="../index.html" class="text-menu"><p >Inicio</p></a></div>
-        <hr>
-        <div class="menu"><a href=""  class="text-menu"><p>Productos</p></a></div>
-        <hr>
-        <div class="menu"><a href="../Contacto/index.html" class="text-menu"><p >Turnos</p></a></div>
-        
-    </nav>
+            <div class="menu">
+                <a href="../index.html" class="text-menu"><p>Inicio</p></a>
+            </div>
+            <hr>
+            <div class="menu">
+                <a href="" class="text-menu"><p>Productos</p></a>
+            </div>
+            <hr>
+            <div class="menu">
+                <a href="../Contacto/index.html" class="text-menu"><p>Turnos</p></a>
+            </div>
+        </nav>
     </header>
-      <!-- main -->
+
     <main class="productos-page">
 
-    <h1>Nuestros productos</h1>
+        <h1>Nuestros productos</h1>
 
-    <p class="descripcion">
-        Encontrá todo lo que tu mascota necesita para su alimentación,
-        cuidado y bienestar.
-    </p>
-<div class="busqueda">
-    <span>🔍</span>
-    <input type="text" placeholder="Buscar un producto...">
-</div>
-    <div class="categorias">
+        <p class="descripcion">
+            Encontrá todo lo que tu mascota necesita para su alimentación,
+            cuidado y bienestar.
+        </p>
 
-        <button class="categoria activa">Todos</button>
-        <button class="categoria">Alimentos</button>
-        <button class="categoria">Accesorios</button>
-        <button class="categoria">Cuidado</button>
-
-    </div>
-
-    <div class="tipo-mascota">
-
-        <h2>Tipo de mascota</h2>
-
-        <div class="animales">
-            <button class="animal perro">🐶 Perros</button>
-            <button class="animal gato">🐱 Gatos</button>
+        <!-- Buscador -->
+        <div class="busqueda">
+            <span>🔍</span>
+            <input type="text" id="buscarProducto"
+                   placeholder="Buscar un producto...">
         </div>
 
-    </div>
+        <!-- Filtros por categoría -->
+        <div class="categorias">
 
-</main>
-   
+            <button class="categoria activa" data-categoria="todos">Todos</button>
+            <button class="categoria" data-categoria="alimentos">Alimentos</button>
+            <button class="categoria" data-categoria="camas">Camas</button>
+            <button class="categoria" data-categoria="juguetes">Juguetes</button>
+            <button class="categoria" data-categoria="cuidado">Cuidado</button>
+
+        </div>
+
+        <!-- Filtros por mascota -->
+        <div class="tipo-mascota">
+
+            <h2>Tipo de mascota</h2>
+
+            <div class="animales">
+
+                <button class="animal activo" data-mascota="todos">
+                    🐾 Todos
+                </button>
+
+                <button class="animal perro" data-mascota="perro">
+                    🐶 Perros
+                </button>
+
+                <button class="animal gato" data-mascota="gato">
+                    🐱 Gatos
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Productos -->
+        <section class="contenedor-productos">
+
+            <div class="encabezado-productos">
+                <h2>Productos disponibles</h2>
+                <p>Encontrá lo mejor para tu mascota ❤️</p>
+            </div>
+
+            <div class="grilla-productos" id="grillaProductos">
+
+                <!-- ALIMENTOS PARA GATOS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Gato1.jpeg" alt="Alimento para gatos">
+                    </div>
+                    <h3>Alimento para gatos "Salmon y pea"</h3>
+                    <p>$7000 kg</p>
+                      <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Gato2.jpeg" alt="Alimento para gatos">
+                    </div>
+                    <h3>Alimento para gatos "Meow mixer"</h3>
+                    <p>$3000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Gato3.jpeg" alt="Alimento para gatos">
+                    </div>
+                    <h3>Alimento para gatos "Feline fuel"</h3>
+                    <p>$6000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Gato4.jpeg" alt="Alimento para gatos">
+                    </div>
+                    <h3>Alimento para gatos "Pawsome paté"</h3>
+                    <p>$4000 pack</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Gato5.jpeg" alt="Alimento para gatos">
+                    </div>
+                    <h3>Alimento para gatos "Perfect balance"</h3>
+                    <p>$5000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- ALIMENTOS PARA PERROS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Perro1.jpeg" alt="Alimento para perros">
+                    </div>
+                    <h3>Alimento para perros "Nutri-growth"</h3>
+                    <p>$4000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Perro2.jpeg" alt="Alimento para perros">
+                    </div>
+                    <h3>Alimento para perros "Wild heritage"</h3>
+                    <p>$4500 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Perro3.jpeg" alt="Alimento para perros">
+                    </div>
+                    <h3>Alimento para perros "paw-perfect"</h3>
+                    <p>$9000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Perro4.jpeg" alt="Alimento para perros">
+                    </div>
+                    <h3>Alimento para perros "Fit y fuerza"</h3>
+                    <p>$5000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="alimentos" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Alimento-Perro5.jpeg" alt="Alimento para perros">
+                    </div>
+                    <h3>Alimento para perros "Vital balance"</h3>
+                    <p>$6000 kg</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- CAMAS PARA GATOS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="camas" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Cama-Gato1.jpeg" alt="Cama para gatos">
+                    </div>
+                    <h3>Cama para gatos tipo repisa</h3>
+                    <p>$12000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="camas" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Cama-Gato2.jpeg" alt="Cama para gatos">
+                    </div>
+                    <h3>Cama para gatos simple</h3>
+                    <p>$7000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- CAMAS PARA PERROS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="camas" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Cama-Perro1.jpeg" alt="Cama para perros">
+                    </div>
+                    <h3>Cama para perros simple</h3>
+                    <p>$9000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="camas" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Cama-Perro2.jpeg" alt="Cama para perros">
+                    </div>
+                    <h3>Cama para perros cerrada</h3>
+                    <p>$13000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="camas" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Cama-Perro3.jpeg" alt="Cama para perros">
+                    </div>
+                    <h3>Cama para perros tradicional</h3>
+                    <p>$8000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- JUGUETES PARA GATOS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Gato1.jpeg" alt="Juguete para gatos">
+                    </div>
+                    <h3>Juguete para gatos "Ratón de peluche"</h3>
+                    <p>$4500</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Gato2.jpeg" alt="Juguete para gatos">
+                    </div>
+                    <h3>Juguete para gatos interactivo</h3>
+                    <p>$8000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Gato3.jpeg" alt="Juguete para gatos">
+                    </div>
+                    <h3>Juguete para gatos "Peluche"</h3>
+                    <p>$6000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Gato4.jpeg" alt="Juguete para gatos">
+                    </div>
+                    <h3>Juguete para gatos "Plumero"</h3>
+                    <p>$9000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Gato5.jpeg" alt="Juguete para gatos">
+                    </div>
+                    <h3>Juguete para gatos "Pelotitas"</h3>
+                    <p>$10000 x3</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- JUGUETES PARA PERROS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Perro1.jpeg" alt="Juguete para perros">
+                    </div>
+                    <h3>Juguete para perros "Hueso de ule"</h3>
+                    <p>$5000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Perro2.jpeg" alt="Juguete para perros">
+                    </div>
+                    <h3>Juguete para perros "Pelota de ule"</h3>
+                    <p>$3000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Perro3.jpeg" alt="Juguete para perros">
+                    </div>
+                    <h3>Juguete para perros "Cuerda + hueso de ule"</h3>
+                    <p>$15000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Perro4.jpeg" alt="Juguete para perros">
+                    </div>
+                    <h3>Juguete para perros "Mordedor interactivo"</h3>
+                    <p>$6000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="juguetes" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Juguete-Perro5.jpeg" alt="Juguete para perros">
+                    </div>
+                    <h3>Juguete para perros "Cuerda + pelota de ule"</h3>
+                    <p>$12000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- HIGIENE PARA PERROS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="cuidado" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Producto-Higiene.jpeg" alt="Producto de higiene para perros">
+                    </div>
+                    <h3>Lavador de patitas</h3>
+                    <p>2x $14000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="cuidado" data-mascota="perro">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Producto-Higiene3.jpeg" alt="Producto de higiene para perros">
+                    </div>
+                    <h3>Bañador</h3>
+                    <p>$7000 c/u</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+
+                <!-- HIGIENE PARA GATOS -->
+
+                <article class="tarjeta-producto"
+                    data-categoria="cuidado" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Producto-Higiene2.jpeg" alt="Producto de higiene para gatos">
+                    </div>
+                    <h3>Quita pelo</h3>
+                    <p>$5000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+                <article class="tarjeta-producto"
+                    data-categoria="cuidado" data-mascota="gato">
+                    <div class="imagen-producto">
+                        <img src="../Imagenes/Producto-Higiene4.jpeg" alt="Producto de higiene para gatos">
+                    </div>
+                    <h3>kit higienico: Arenero + palita + shampoo + acondicionador + jabón</h3>
+                    <p>$30000</p>
+                    <button class="botonComprar">Comprar</button>
+                </article>
+
+            </div>
+
+            <!-- Aviso de nuevos productos -->
+            <div class="aviso-productos" id="avisoProductos">
+                <span class="estrella">✦</span>
+                <div>
+                    <h3>¡Nuevos productos pronto!</h3>
+                    <p>Estamos preparando más opciones para tu mascota.</p>
+                </div>
+                <span class="estrella">✧</span>
+            </div>
+
+            <!-- Mensaje cuando no hay coincidencias -->
+            <p class="sin-resultados" id="sinResultados">
+                No encontramos productos que coincidan con tu búsqueda.
+            </p>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
