@@ -753,3 +753,42 @@ nav .menu:hover .text-menu {
         font-size: 12px;
     }
 }
+
+/* Adaptación del encabezado y menú a celulares */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 15px 10px;
+    }
+
+    header i {
+        font-size: 50px;
+    }
+
+    header #logo {
+        font-size: 26px;
+        margin: 5px 0 10px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        margin: 0;
+    }
+
+    nav .menu {
+        flex: 1;
+        padding: 12px 5px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    nav .text-menu {
+        font-size: 14px;
+    }
+}
+  
